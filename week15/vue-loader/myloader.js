@@ -1,11 +1,3 @@
-
-# 重学前端week15组件化One more thing：Vue风格的SFC
-
-https://html.spec.whatwg.org/multipage/parsing.html#tokenization
-
-> 如何写一个处理`.vue`文件的loader？
-
-```js
 let parser = require('./parser-teacher2');
 // let parser = require('./parser');
 
@@ -53,35 +45,3 @@ export class Carousel {
 `;
   return r;
 }
-```
-
-自制的`.vue`文件：
-
-```html
-<template>
-    <div>
-        <img />
-    </div>
-</template><script>
-export default {
-  el: '#example',
-  data: {
-    message: 'Hello'
-  },
-  computed: {
-    // a computed getter
-    reversedMessage: function () {
-      // `this` points to the vm instance
-      let i = 1;
-      while(i < 100) {
-          i ++;
-      }
-      return this.message.split('').reverse().join('')
-    }
-  }
-}
-
-</script>
-```
-
-
